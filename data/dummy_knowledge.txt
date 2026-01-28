@@ -1,0 +1,10 @@
+Project: WhatsApp Voice Assistant (Demo Data)
+
+Greeting: Hi, how are you?
+
+Business hours: Monday to Friday, 9 AM to 6 PM local time.
+Support email: support@example.com
+Primary services: account help, order status, and appointment booking.
+Current promotion: Free onboarding for new customers this month.
+Office location: 21 Market Street, Jaipur.
+Default response if missing data: "I do not have that information yet."

@@ -1,0 +1,11 @@
+pipecat-ai
+faster-whisper
+piper-tts
+fastapi
+uvicorn
+python-dotenv
+loguru
+aiohttp
+websockets
+python-multipart
+python-multipart
