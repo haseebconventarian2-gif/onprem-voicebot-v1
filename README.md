@@ -4,14 +4,16 @@
 
 Local AI voice bot for WhatsApp calls using WebRTC, Ollama, faster-whisper, Piper TTS, and FastAPI.
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Reference%20Implementation-6366F1)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white&style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Reference%20Implementation-6366F1?style=for-the-badge)
+
+[Story](#-the-story) · [Features](#-features) · [Setup](#-getting-started) · [Configuration](#-configuration)
 
 </div>
 
 ---
 
-## Overview
+## 🎯 Overview
 
 Local AI voice bot for WhatsApp calls using WebRTC, Ollama, faster-whisper, Piper TTS, and FastAPI.
 
@@ -23,18 +25,25 @@ Pipecat coordinates the streaming audio pipeline and WebRTC connection. faster-w
 
 The current implementation is a capable prototype for real-time local AI. Future work should measure end-to-end latency, improve interruption handling, isolate calls safely, and add load tests for concurrent conversations.
 
-## Highlights
+## ✨ Features
 
 - WhatsApp Business calling
 - Real-time WebRTC audio
 - Local language-model inference
 - Local STT and TTS
 
-## Tech Stack
+## 🧰 Tech Stack
 
-Python Â· Pipecat Â· FastAPI Â· Ollama Â· faster-whisper Â· Piper
+| Technology | Purpose |
+| --- | --- |
+| **Python** | Primary programming language |
+| **Pipecat** | Real-time voice pipeline |
+| **FastAPI** | API and web server |
+| **Ollama** | Local language-model runtime |
+| **faster-whisper** | Local speech recognition |
+| **Piper** | Local speech synthesis |
 
-## Getting Started
+## 🚀 Getting Started
 
 ```bash
 git clone https://github.com/haseebconventarian2-gif/onprem-voicebot-v1.git
@@ -45,27 +54,27 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## Configuration
+## ⚙️ Configuration
 
 Configure WhatsApp Business, Ollama, Whisper, and Piper values in `.env`.
 
 > Store credentials in `.env` and never commit secrets.
 
-## Run
+## ▶️ Run
 
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-## Project Status
+## 📌 Project Status
 
 This is a learning and reference implementation. Review security, validation, monitoring, and deployment settings before production use.
 
-## Detailed Code Reference
+## 🧩 Detailed Code Reference
 
 **Runtime flow:** `Text/audio -> local STT -> context -> Ollama -> local TTS/text`
 
-### Repository map
+### 📁 Repository Map
 
 - `__pycache__/` - supporting package or resources
 - `bot.py` - project file
@@ -80,7 +89,7 @@ This is a learning and reference implementation. Review security, validation, mo
 - `test.wav` - project file
 - `uv.lock` - project file
 
-### Validation checklist
+## 🧪 Validation Checklist
 
 1. Install dependencies in a clean virtual environment.
 2. Configure only the environment variables needed by enabled integrations.
@@ -88,7 +97,7 @@ This is a learning and reference implementation. Review security, validation, mo
 4. Exercise successful and invalid requests.
 5. Confirm secrets, private datasets, indexes, and model artifacts are ignored.
 
-### Production checklist
+## 🔒 Production Checklist
 
 - Use managed secret storage.
 - Add authentication, authorization, rate limiting, and request-size limits.
@@ -99,3 +108,24 @@ This is a learning and reference implementation. Review security, validation, mo
 > This README reflects the current codebase. External AI, telephony, and messaging features require their respective accounts, assets, and approvals.
 
 
+
+
+## 🛠 Troubleshooting
+
+<details>
+<summary><strong>The application does not start</strong></summary>
+
+Confirm the virtual environment is active, install `requirements.txt`, and check that every required environment variable is defined.
+</details>
+
+<details>
+<summary><strong>An AI or messaging service cannot be reached</strong></summary>
+
+Verify the endpoint, credentials, deployment names, network access, and external service status. Restart the application after changing `.env`.
+</details>
+
+<details>
+<summary><strong>A model, index, or artifact is missing</strong></summary>
+
+Run the repository's documented build or training step and confirm that generated files are stored at the paths expected by the code.
+</details>
