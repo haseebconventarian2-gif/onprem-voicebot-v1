@@ -15,6 +15,14 @@ Local AI voice bot for WhatsApp calls using WebRTC, Ollama, faster-whisper, Pipe
 
 Local AI voice bot for WhatsApp calls using WebRTC, Ollama, faster-whisper, Piper TTS, and FastAPI.
 
+## 📖 The Story
+
+A voice note is asynchronous; a phone call is immediate. This project explores the harder real-time problem: connecting a WhatsApp Business call to a locally hosted AI pipeline without sending language-model inference to a cloud provider.
+
+Pipecat coordinates the streaming audio pipeline and WebRTC connection. faster-whisper converts speech to text, Ollama generates a short grounded reply, and Piper turns that reply back into audio. The repository includes both a WhatsApp server path and a browser-based local test mode, making it possible to develop the conversation loop before channel approval is complete.
+
+The current implementation is a capable prototype for real-time local AI. Future work should measure end-to-end latency, improve interruption handling, isolate calls safely, and add load tests for concurrent conversations.
+
 ## Highlights
 
 - WhatsApp Business calling
@@ -89,4 +97,5 @@ This is a learning and reference implementation. Review security, validation, mo
 - Define retention and privacy controls for audio and customer data.
 
 > This README reflects the current codebase. External AI, telephony, and messaging features require their respective accounts, assets, and approvals.
+
 
